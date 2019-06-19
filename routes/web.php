@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/','page@index');
+//Route::get('/name', 'page@index');
+Route::get('/about','page@about') ;
+Route::get('/prolanguage','page@prolanguage');
+
+Route::get('/name/{name}/{id}', function ($name,$id) {
+    return 'my name is '.$name. ' and id is '.$id;
 });
